@@ -13,39 +13,79 @@
     <title>Ejercicio 1</title>
 </head>
 <body>
+<h1 class="text-center">CALCULADORA</h1>
+<br>
+<form method="post" action="ejercicio1.php" class="text-center">
+    <div class="form-group">
+    <label for="num1">Ingrese el primer número</label><br>
+    <input type="text" name="num1"/>
+	</div>
+
+	<div class="form-group">
+	<label for="num2">Ingrese el segundo número</label><br>
+    <input type="text" name="num2"/>
+	</div>
+
+
+    <div class="form-group">
+	<label for="num2">Seleccionar la operación</label><br>
+	<select name="opciones">
+        <option value="0">Sumar</option>
+        <option value="1">Restar</option>
+        <option value="2">Multiplicar</option>
+        <option value="3">Dividir</option>
+    </select><br>
+	</div>
+
+<input class="btn btn-primary" type="submit" name="calcular" value="Calcular">
+
+
+</form>
+
     <!-- DESARROLLO DEL EJERCICIO -->
 
-        <?php
+<?php
+class opera{
+    public static function sumar($numero1, $numero2){
+        $suma=$numero1+$numero2;
+        return $suma;
+    }
+    public static function restar($numero1, $numero2){
+        $resta=$numero1-$numero2;
+        return $resta;
+    }
+    public static function multiplicar($numero1, $numero2){
+        $multi=$numero1*$numero2;
+        return $multi;
+    }
+    public static function dividir($numero1, $numero2){
+        $divi=$numero1/$numero2;
+        return $divi;
 
-        ?>
+    }
+}
+//capturar las variables de calcular
+if(isset($_REQUEST['calcular'])){
+    $n1=$_REQUEST['num1'];
+    $n2=$_REQUEST['num2'];
+    $op=$_REQUEST['opciones'];
+
+    switch($op){
+        case 0:echo "<div align='center'>La suma de $n1 + $n2 es = ".opera::sumar($n1, $n2);break;
+        case 1:echo "<div align='center'>La resta de $n1 - $n2 es = ".opera::restar($n1, $n2);break;
+        case 2:echo "<div align='center'>La multiplicación de $n1 * $n2  es = ".opera::multiplicar($n1, $n2);break;
+        case 3:echo "<div align='center'>La división de $n1 / $n2 es = ".opera::dividir($n1, $n2);break;
+
+    }
+}
+?>
 
     <!-- //FIN DEL EJERCICIO -->
 
-    <!-- footer -->
-<div class="footer">
-		<div class="container">
-			<div class="footer-grids">
-				<div class="col-md-3 footer-nav wow fadeInLeft animated" data-wow-delay=".5s">
-					<h4>Navegacion</h4>
-					<ul>
-					<li>
-						<li><a href="ejercicio1.php">Ejercicio 1</a></li>
-						<li><a href="ejercicio2.php">Ejercicio 2</a></li>
-						<li><a href="ejercicio3.php">Ejercicio 3</a></li>
-						<li><a href="ejercicio4.php">Ejercicio 4</a></li>
-                        <li><a href="ejercicio5.php">Ejercicio 5</a></li>
-                        <li><a href="ejercicio6.php">Ejercicio 6</a></li>
-                        <li><a href="ejercicio7.php">Ejercicio 7</a></li>
-								
-					</ul>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
+
 			<div class="copyright wow fadeInUp animated" data-wow-delay=".5s">
 				<p>© 2021  . Universidad Gerardo Barrios</p>
 			</div>
-		</div>
-	</div>
-	<!-- //footer -->
+	
 </body>
 </html>
