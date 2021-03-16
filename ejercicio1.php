@@ -13,8 +13,19 @@
     <title>Ejercicio 1</title>
 </head>
 <body>
-<h1 class="text-center">CALCULADORA</h1>
+<div class="team">
+      <div class="container">
+        <div class="popular-heading team-heading">
+          <h3 class="wow fadeInUp animated" data-wow-delay=".5s">Calculadora</h3>
+          <p class="wow fadeInUp animated" data-wow-delay=".5s">Escriba un programa que realice las operaciones básicas (suma, resta, multiplicación, división),
+           deberá crear un formulario para procesarlos valoresingresados por el usuario, haga uso deun control combo box para seleccionar la operación a realizar.</p>
+        </div>
+                </div>
+            </div>
+        </div>
 <br>
+
+ <!-- DISEÑO DE LA CALCULADORA  -->
 <form method="post" action="ejercicio1.php" class="text-center">
     <div class="form-group">
     <label for="num1">Ingrese el primer número</label><br>
@@ -26,7 +37,7 @@
     <input type="text" name="num2"/>
 	</div>
 
-
+ <!-- COMBO BOX -->
     <div class="form-group">
 	<label for="num2">Seleccionar la operación</label><br>
 	<select name="opciones">
@@ -45,6 +56,7 @@
     <!-- DESARROLLO DEL EJERCICIO -->
 
 <?php
+//Se crea la clase opera para realizar las cuatro operaciones
 class opera{
     public static function sumar($numero1, $numero2){
         $suma=$numero1+$numero2;
@@ -70,6 +82,7 @@ if(isset($_REQUEST['calcular'])){
     $n2=$_REQUEST['num2'];
     $op=$_REQUEST['opciones'];
 
+//estructura condicionale switch recibe variable op del combo box
     switch($op){
         case 0:echo "<div align='center'>La suma de $n1 + $n2 es = ".opera::sumar($n1, $n2);break;
         case 1:echo "<div align='center'>La resta de $n1 - $n2 es = ".opera::restar($n1, $n2);break;

@@ -25,8 +25,8 @@
 				<div class="team-grids">
 					<div class="col-md-4 team-grid wow fadeInLeft animated" data-wow-delay=".5s">
 						<img src="images/t1.png" alt="" />
-						<h4>Kilmar Roberto Chevez</h4>
-						<p>SMISXXXX</p>
+						<h4>Roberto Kilmar Chevez</h4>
+						<p>SMIS619019</p>
 						
 					</div>
 					<div class="col-md-4 team-grid wow fadeInUp animated" data-wow-delay=".5s">
