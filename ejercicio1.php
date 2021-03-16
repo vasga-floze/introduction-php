@@ -82,10 +82,8 @@ if(isset($_REQUEST['calcular'])){
 
     <!-- //FIN DEL EJERCICIO -->
 
-
-			<div class="copyright wow fadeInUp animated" data-wow-delay=".5s">
-				<p>© 2021  . Universidad Gerardo Barrios</p>
-			</div>
-	
+    <div class="copyright wow fadeInUp animated" data-wow-delay=".5s">
+		<p>© 2021  . Universidad Gerardo Barrios</p>
+	</div>
 </body>
 </html>
