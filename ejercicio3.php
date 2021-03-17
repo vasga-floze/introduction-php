@@ -49,6 +49,55 @@
         ?>
 
 
+        <div class="container text-center">
+        <div class="text-center wow fadeInLeft">
+            <h3>AGENDA</h3>
+        </div>
+
+        <!--Tabla -->
+        <table class="table table-bordered table-dark wow fadeInRight animated" data-wow-delay=".5s" >
+            <!--encabezado de la tabla-->
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Teléfono</th>
+                <th scope="col">Correo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--primer registro de la tabla-->
+                <tr>
+                <th scope="row">1</th>
+                <!--el nombre del array: $datos, 
+                el indice del primer array interior: [0]
+                el key a mostrar dentro de ese array ["nombre"] 
+                Y asi sucesivamente con cada key-->
+                <td><h5><?=$datos[0]["nombre"];?></h5></td>
+                <td><h5><?=$datos[0]["telefono"];?></h5></td>
+                <td><h5><?=$datos[0]["correo"];?></h5></td>
+                </tr>
+                <!--segundo registro de la tabla-->
+                <tr>
+                <th scope="row">2</th>
+                <td><h5><?=$datos[1]["nombre"];?></h5></td>
+                <td><h5><?=$datos[1]["telefono"];?></h5></td>
+                <td><h5><?=$datos[1]["correo"];?></h5></td>
+                </tr>
+                <!--tercer registro de la tabla-->
+                <tr>
+                <th scope="row">3</th>
+                <td><h5><?=$datos[2]["nombre"];?></h5></td>
+                <td><h5><?=$datos[2]["telefono"];?></h5></td>
+                <td><h5><?=$datos[2]["correo"];?></h5></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- //FIN DE LA TABLA-->
+
+    <!-- //FIN DEL EJERCICIO -->
+
     <div class="copyright wow fadeInUp animated" data-wow-delay=".5s">
 		<p>© 2021  . Universidad Gerardo Barrios</p>
 	</div>
