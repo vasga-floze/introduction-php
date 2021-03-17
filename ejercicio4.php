@@ -35,8 +35,46 @@
     </div>
 
     <?php
-
+        /* Crear array asociativo*/
+        $employees = array(
+            array( 
+                "departamento" => "R.R.H.H", 
+                "empleado" => "Margarita Linares", 
+                "salario" => "$3,500" 
+            ),
+            array( 
+                "departamento" => "Contabilidad ", 
+                "empleado" => "Alberto Canizales", 
+                "salario" => "$2,500" 
+            ),
+            array( 
+                "departamento" => "Finanzas", 
+                "empleado" => " Maria Gomez", 
+                "salario" => "$2,500" 
+            ),
+            array( 
+                "departamento" => "Gerencia", 
+                "empleado" => " Anastacia Rivera", 
+                "salario" => "$3,000" 
+            ),
+            array( 
+                "departamento" => "Finanzas", 
+                "empleado" => "Bladimir Romero", 
+                "salario" => "$1,000" 
+            ),
+            array( 
+                "departamento" => "Contabilidad ", 
+                "empleado" => "Andrea Robles", 
+                "salario" => "$3,500" 
+            ),
+            array( 
+                "departamento" => "R.R.H.H", 
+                "empleado" => "Carmen Rosales", 
+                "salario" => "$1,500" 
+            )
+        );
     ?>
+
 
     <!-- //FIN DEL EJERCICIO -->
 
