@@ -15,9 +15,17 @@
 <body>
     <!-- DESARROLLO DEL EJERCICIO -->
 
-        <?php
-
-        ?>
+    <div class="team" body style="background-color:#2DCB74;">
+        <div class="container">
+                <div class="popular-heading team-heading">
+                    <h3 class="wow fadeInUp animated" data-wow-delay=".5s">Ejercicio 3</h3>
+                    <p class="wow fadeInUp animated" data-wow-delay=".5s">Cree un script que muestre el siguiente array en una tabla.</p>
+                </div>
+                <div class=" team-heading">
+                    <img src="images/tres.jpg" class="img-thumbnail wow fadeInRight animated" alt="100px" >
+                </div>
+        </div>
+    </div>
 
     <!-- //FIN DEL EJERCICIO -->
 
