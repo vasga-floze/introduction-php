@@ -27,7 +27,27 @@
         </div>
     </div>
 
-    <!-- //FIN DEL EJERCICIO -->
+    <?php
+            /* Cree un script que muestre el siguiente array en una tabla.*/
+            $datos = array(
+               array( 
+                    "nombre" => "Francisco Garcia", 
+                    "telefono" => "79896321", 
+                    "correo" => "fgarcia@gmail.com" 
+                ),
+               array( 
+                   "nombre" => "Manuel Salinas",
+                   "telefono" => "63254178", 
+                   "correo" => "msalinas@gmail.com" 
+                ),
+               array(
+                    "nombre" => "Johana Melara",
+                    "telefono" => "76325799",
+                    "correo" => "jmelara@gmail.com"
+               )
+            );
+        ?>
+
 
     <div class="copyright wow fadeInUp animated" data-wow-delay=".5s">
 		<p>© 2021  . Universidad Gerardo Barrios</p>
