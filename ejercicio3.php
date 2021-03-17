@@ -15,9 +15,86 @@
 <body>
     <!-- DESARROLLO DEL EJERCICIO -->
 
-        <?php
+    <div class="team" body style="background-color:#2DCB74;">
+        <div class="container">
+                <div class="popular-heading team-heading">
+                    <h3 class="wow fadeInUp animated" data-wow-delay=".5s">Ejercicio 3</h3>
+                    <p class="wow fadeInUp animated" data-wow-delay=".5s">Cree un script que muestre el siguiente array en una tabla.</p>
+                </div>
+                <div class=" team-heading">
+                    <img src="images/tres.jpg" class="img-thumbnail wow fadeInRight animated" alt="100px" >
+                </div>
+        </div>
+    </div>
 
+    <?php
+            /* Cree un script que muestre el siguiente array en una tabla.*/
+            $datos = array(
+               array( 
+                    "nombre" => "Francisco Garcia", 
+                    "telefono" => "79896321", 
+                    "correo" => "fgarcia@gmail.com" 
+                ),
+               array( 
+                   "nombre" => "Manuel Salinas",
+                   "telefono" => "63254178", 
+                   "correo" => "msalinas@gmail.com" 
+                ),
+               array(
+                    "nombre" => "Johana Melara",
+                    "telefono" => "76325799",
+                    "correo" => "jmelara@gmail.com"
+               )
+            );
         ?>
+
+
+        <div class="container text-center">
+        <div class="text-center wow fadeInLeft">
+            <h3>AGENDA</h3>
+        </div>
+
+        <!--Tabla -->
+        <table class="table table-bordered table-dark wow fadeInRight animated" data-wow-delay=".5s" >
+            <!--encabezado de la tabla-->
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Teléfono</th>
+                <th scope="col">Correo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--primer registro de la tabla-->
+                <tr>
+                <th scope="row">1</th>
+                <!--el nombre del array: $datos, 
+                el indice del primer array interior: [0]
+                el key a mostrar dentro de ese array ["nombre"] 
+                Y asi sucesivamente con cada key-->
+                <td><h5><?=$datos[0]["nombre"];?></h5></td>
+                <td><h5><?=$datos[0]["telefono"];?></h5></td>
+                <td><h5><?=$datos[0]["correo"];?></h5></td>
+                </tr>
+                <!--segundo registro de la tabla-->
+                <tr>
+                <th scope="row">2</th>
+                <td><h5><?=$datos[1]["nombre"];?></h5></td>
+                <td><h5><?=$datos[1]["telefono"];?></h5></td>
+                <td><h5><?=$datos[1]["correo"];?></h5></td>
+                </tr>
+                <!--tercer registro de la tabla-->
+                <tr>
+                <th scope="row">3</th>
+                <td><h5><?=$datos[2]["nombre"];?></h5></td>
+                <td><h5><?=$datos[2]["telefono"];?></h5></td>
+                <td><h5><?=$datos[2]["correo"];?></h5></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- //FIN DE LA TABLA-->
 
     <!-- //FIN DEL EJERCICIO -->
 
