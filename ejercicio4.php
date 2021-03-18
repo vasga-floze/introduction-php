@@ -74,6 +74,81 @@
             )
         );
     ?>
+    <!--Mostrar los datos del array en una tabla-->
+    <div class="container text-center">
+        <div class="text-center wow fadeInLeft">
+            <h3>EMPLEADOS</h3>
+        </div>
+
+        <!--Tabla -->
+        <table class="table table-bordered table-dark wow fadeInRight animated" data-wow-delay=".5s" >
+            <!--encabezado de la tabla-->
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col"><h3>Departamento</h3></th>
+                <th scope="col"><h3>Empleado</h3></th>
+                <th scope="col"><h3>Salario</h3></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--primer registro de la tabla-->
+                <tr>
+                <th scope="row">1</th>
+                <!--el nombre del array: $datos, 
+                el indice del primer array interior: [0]
+                el key a mostrar dentro de ese array ["departamento"] 
+                Y asi sucesivamente con cada key-->
+                <td><h4><?=$employees[0]["departamento"];?></h4></td>
+                <td><h4><?=$employees[0]["empleado"];?></h4></td>
+                <td><h4>$<?=$employees[0]["salario"];?></h4></td>
+                </tr>
+                <!--segundo registro de la tabla-->
+                <tr>
+                <th scope="row">2</th>
+                <td><h4><?=$employees[1]["departamento"];?></h4></td>
+                <td><h4><?=$employees[1]["empleado"];?></h4></td>
+                <td><h4>$<?=$employees[1]["salario"];?></h4></td>
+                </tr>
+                <!--tercer registro de la tabla-->
+                <tr>
+                <th scope="row">3</th>
+                <td><h4><?=$employees[2]["departamento"];?></h4></td>
+                <td><h4><?=$employees[2]["empleado"];?></h4></td>
+                <td><h4>$<?=$employees[2]["salario"];?></h4></td>
+                </tr>
+                <!--cuarto registro de la tabla-->
+                <tr>
+                <th scope="row">4</th>
+                <td><h4><?=$employees[3]["departamento"];?></h4></td>
+                <td><h4><?=$employees[3]["empleado"];?></h4></td>
+                <td><h4>$<?=$employees[3]["salario"];?></h4></td>
+                </tr>
+                <!--quinto registro de la tabla-->
+                <tr>
+                <th scope="row">5</th>
+                <td><h4><?=$employees[4]["departamento"];?></h4></td>
+                <td><h4><?=$employees[4]["empleado"];?></h4></td>
+                <td><h4>$<?=$employees[4]["salario"];?></h4></td>
+                </tr>
+                <!--sexto registro de la tabla-->
+                <tr>
+                <th scope="row">6</th>
+                <td><h4><?=$employees[5]["departamento"];?></h4></td>
+                <td><h4><?=$employees[5]["empleado"];?></h4></td>
+                <td><h4>$<?=$employees[5]["salario"];?></h4></td>
+                </tr>
+                <!--septimo registro de la tabla-->
+                <tr>
+                <th scope="row">7</th>
+                <td><h4><?=$employees[6]["departamento"];?></h4></td>
+                <td><h4><?=$employees[6]["empleado"];?></h4></td>
+                <td><h4>$<?=$employees[6]["salario"];?></h4></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- //FIN DE LA TABLA-->
 
 
     <!-- //FIN DEL EJERCICIO -->
