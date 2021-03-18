@@ -167,6 +167,45 @@
 
     <h4 class="text-center"><b>El salario promedio es:</b> $<?=round($promedio, 2)?></h4>
 
+    <!-- Cantidad de empleados por departamento-->
+    <?php
+        
+         /*declarar variables para que ya existan cuando se usan como 
+            operadores de incremento en el if*/
+            $rrhh = "";
+            $contabilidad = "";
+            $finanzas = "";
+            $gerencia = "";
+        
+        for($i=0;$i<7;$i++)
+        {
+            //se indica la clave 
+            $depto =  ($employees[$i]["departamento"]);
+                
+            if ($depto == "R.R.H.H") 
+            {
+                $rrhh++;
+            } 
+            elseif ($depto == "Contabilidad ") 
+            {
+                $contabilidad++;
+            } 
+            elseif ($depto == "Finanzas") 
+            {
+                $finanzas++;
+            }
+            else
+            {
+                $gerencia++;
+            }
+        }
+    ?>
+    <br/>
+    <h4 class="text-center wow fadeInLeft animated" data-wow-delay=".5s"><?="Hay " . $rrhh . " empleados en el departamento de R.R.H.H" . "<br/>"?></h4>
+    <h4 class="text-center wow fadeInLeft animated" data-wow-delay=".5s"><?="Hay " . $contabilidad . " empleados en el departamento de Contabilidad" . "<br/>"?></h4>
+    <h4 class="text-center wow fadeInLeft animated" data-wow-delay=".5s"><?="Hay " . $finanzas . " empleados en el departamento de Finanzas" . "<br/>"?></h4>
+    <h4 class="text-center wow fadeInLeft animated" data-wow-delay=".5s"><?="Hay " . $gerencia . " empleado en el departamento de Gerencia" . "<br/>"?></h4>
+    <br/>
     <!-- //FIN DEL EJERCICIO -->
 
     <div class="copyright wow fadeInUp animated" data-wow-delay=".5s">
