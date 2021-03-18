@@ -19,7 +19,7 @@
         <div class="container">
                 <div class="popular-heading team-heading">
                     <h3 class="wow fadeInUp animated" data-wow-delay=".5s">Ejercicio 3</h3>
-                    <p class="wow fadeInUp animated" data-wow-delay=".5s">Cree un script que muestre el siguiente array en una tabla.</p>
+                    <h2 class="wow fadeInUp animated" data-wow-delay=".5s" style="color:#ffffff;">Cree un script que muestre el siguiente array en una tabla.</h2>
                 </div>
                 <div class=" team-heading">
                     <img src="images/tres.jpg" class="img-thumbnail wow fadeInRight animated" alt="100px" >
@@ -60,9 +60,9 @@
             <thead>
                 <tr>
                 <th scope="col">#</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Teléfono</th>
-                <th scope="col">Correo</th>
+                <th scope="col"><h3>Nombre</h3></th>
+                <th scope="col"><h3>Teléfono</h3></th>
+                <th scope="col"><h3>Correo</h3></th>
                 </tr>
             </thead>
             <tbody>
@@ -73,23 +73,23 @@
                 el indice del primer array interior: [0]
                 el key a mostrar dentro de ese array ["nombre"] 
                 Y asi sucesivamente con cada key-->
-                <td><h5><?=$datos[0]["nombre"];?></h5></td>
-                <td><h5><?=$datos[0]["telefono"];?></h5></td>
-                <td><h5><?=$datos[0]["correo"];?></h5></td>
+                <td><h4><?=$datos[0]["nombre"];?></h4></td>
+                <td><h4><?=$datos[0]["telefono"];?></h4></td>
+                <td><h4><?=$datos[0]["correo"];?></h4></td>
                 </tr>
                 <!--segundo registro de la tabla-->
                 <tr>
                 <th scope="row">2</th>
-                <td><h5><?=$datos[1]["nombre"];?></h5></td>
-                <td><h5><?=$datos[1]["telefono"];?></h5></td>
-                <td><h5><?=$datos[1]["correo"];?></h5></td>
+                <td><h4><?=$datos[1]["nombre"];?></h4></td>
+                <td><h4><?=$datos[1]["telefono"];?></h4></td>
+                <td><h4><?=$datos[1]["correo"];?></h4></td>
                 </tr>
                 <!--tercer registro de la tabla-->
                 <tr>
                 <th scope="row">3</th>
-                <td><h5><?=$datos[2]["nombre"];?></h5></td>
-                <td><h5><?=$datos[2]["telefono"];?></h5></td>
-                <td><h5><?=$datos[2]["correo"];?></h5></td>
+                <td><h4><?=$datos[2]["nombre"];?></h4></td>
+                <td><h4><?=$datos[2]["telefono"];?></h4></td>
+                <td><h4><?=$datos[2]["correo"];?></h4></td>
                 </tr>
             </tbody>
         </table>
