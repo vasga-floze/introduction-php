@@ -40,37 +40,37 @@
             array( 
                 "departamento" => "R.R.H.H", 
                 "empleado" => "Margarita Linares", 
-                "salario" => "$3,500" 
+                "salario" => 3500 
             ),
             array( 
                 "departamento" => "Contabilidad ", 
                 "empleado" => "Alberto Canizales", 
-                "salario" => "$2,500" 
+                "salario" => 2000 
             ),
             array( 
                 "departamento" => "Finanzas", 
                 "empleado" => " Maria Gomez", 
-                "salario" => "$2,500" 
+                "salario" => 2500 
             ),
             array( 
                 "departamento" => "Gerencia", 
                 "empleado" => " Anastacia Rivera", 
-                "salario" => "$3,000" 
+                "salario" => 3000 
             ),
             array( 
                 "departamento" => "Finanzas", 
                 "empleado" => "Bladimir Romero", 
-                "salario" => "$1,000" 
+                "salario" => 1000 
             ),
             array( 
                 "departamento" => "Contabilidad ", 
                 "empleado" => "Andrea Robles", 
-                "salario" => "$3,500" 
+                "salario" => 3000 
             ),
             array( 
                 "departamento" => "R.R.H.H", 
                 "empleado" => "Carmen Rosales", 
-                "salario" => "$1,500" 
+                "salario" => 1500 
             )
         );
     ?>
