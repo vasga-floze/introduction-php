@@ -208,8 +208,8 @@
     <br/>
     <!-- //FIN DEL EJERCICIO -->
 
-    <div class="copyright wow fadeInUp animated" data-wow-delay=".5s">
-		<p>© 2021  . Universidad Gerardo Barrios</p>
+    <div class="copyright wow fadeInUp animated" data-wow-delay=".5s" body style="background-color:#2DCB74;">
+		<p class= "text-center">© 2021  . Universidad Gerardo Barrios</p>
 	</div>
 </body>
 </html>
