@@ -150,6 +150,22 @@
     </div>
     <!-- //FIN DE LA TABLA-->
 
+    <!--Calcular el salario promedio-->
+    <?
+        $suma = 0;
+        for($i=0;$i<7;$i++)
+        {
+           //sumar salario, acumulando en cada iteración 
+            $suma +=  ($employees[$i]["salario"]);
+                       
+        }
+        //echo $suma . "<br/>"; //comprobar la suma total de salario
+
+        //calcular promedio que es igual a la suma de todos los salarios entre la cantidad de salarios
+        $promedio = ($suma)/$i; 
+    ?>
+
+    <h4 class="text-center"><b>El salario promedio es:</b> $<?=round($promedio, 2)?></h4>
 
     <!-- //FIN DEL EJERCICIO -->
 
