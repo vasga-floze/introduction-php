@@ -165,7 +165,7 @@
         $promedio = ($suma)/$i; 
     ?>
 
-    <h4 class="text-center"><b>El salario promedio es:</b> $<?=round($promedio, 2)?></h4>
+    <h4 class="text-center wow fadeInRight animated" data-wow-delay=".5s"><b>El salario promedio es:</b> $<?=round($promedio, 2)?></h4>
 
     <!-- Cantidad de empleados por departamento-->
     <?php
