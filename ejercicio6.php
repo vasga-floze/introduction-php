@@ -14,8 +14,30 @@
 </head>
 <body>
     <!-- DESARROLLO DEL EJERCICIO -->
+    <form method="post" action="ejercicio1.php" class="text-center">
+    <div class="form-group">
+    <label for="num1">Ingrese un número</label><br>
+    <input type="text" name="num1"/>
+	</div>
 
-        <?php
+	
+    <?php 
+    declare(strict_types=1);
+    
+
+   
+    function calcular($numero1, $numero2):float{
+        $numero1=3.4;
+        $numero2=6.4;
+        
+    if ($numero1>$numero2){
+        echo "$numero1 es mayor que $numero2";
+    }
+    else{
+        echo "$numero2 es mayor que $numero1";
+    }
+
+    };
 
         ?>
 

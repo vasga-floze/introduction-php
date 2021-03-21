@@ -12,8 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 1</title>
 </head>
-<body>
-<div class="team">
+<body >
+<div class="team" style="background-color:#2DCB74;">
       <div class="container">
         <div class="popular-heading team-heading">
           <h3 class="wow fadeInUp animated" data-wow-delay=".5s">Calculadora</h3>
