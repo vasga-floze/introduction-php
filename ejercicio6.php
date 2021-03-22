@@ -29,30 +29,33 @@
         </div>
     </div>
 
+	<div class=" container text-center wow fadeInLeft animated" data-wow-delay=".5s">
 		<FORM ACTION="ejercicio6.php"  METHOD="POST"> 
-	
-			Introduzca el primer número:
+		
+			<h3>Introduzca el primer número entero:</h3>
 			<INPUT  TYPE="number" NAME="numero1"><BR> 
-			Introduzca el segundo número:
-			 <INPUT TYPE="number" NAME="numero2"><BR> 
-			<button type="submit" class="btn btn-success" type="submit" name="btn1">Comparar</button>
-	
-		</FORM>   
+			<h3>Introduzca el segundo número entero:</h3>
+			<INPUT TYPE="number" NAME="numero2">
+			<hr> 
+			<button type="submit" class="btn btn-success" type="submit" name="btn1"><h4>Comparar</h4></button>
+
+		</FORM> 
+	</div>  
 
         <?php
 		 
 			function comparar ($v1,$v2):int{
 			
 				if ($v1>$v2){
-					echo "El número mayor es ".$v1." ";
+					echo "<h3 class='text-center wow fadeInRight animated'>El número mayor es $v1</h3>";
 					return $v1;
 				}
 				elseif ($v1==$v2){
-					echo "El número ".$v1." es igual al número ".$v2." ";
+					echo "<h3 class='text-center wow fadeInRight animated'>El número $v1 es igual al número $v2</h3>";
 					return $v2;
 				}
 				else{
-					echo "El número mayor es ".$v2." ";
+					echo "<h3 class='text-center wow fadeInRight animated'>El número mayor es $v2</h3>";
 					return $v2;
 				}
 			}
