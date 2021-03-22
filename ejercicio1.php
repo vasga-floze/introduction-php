@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 1</title>
 </head>
+
 <body>
     <div class="team" body style="background-color:#2DCB74;">
         <div class="container">
@@ -19,7 +20,6 @@
                 <h3 class="wow fadeInUp animated" data-wow-delay=".5s">Calculadora</h3>
                 <h2 class="wow fadeInUp animated" data-wow-delay=".5s" style="color:#ffffff;">Escriba un programa que realice las operaciones básicas (suma, resta, multiplicación, división),
                 deberá crear un formulario para procesar los valores ingresados por el usuario, haga uso de un control combo box para seleccionar la operación a realizar.</h2>
-                
             </div>
         </div>
     </div>

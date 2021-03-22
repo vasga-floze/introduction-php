@@ -17,7 +17,7 @@
 <div class="team" body style="background-color:#2DCB74;">
       <div class="container">
         <div class="popular-heading team-heading">
-          <h3 class="wow fadeInUp animated" data-wow-delay=".5s">Ejercicio 2</h3>
+          <h3 class="wow fadeInUp animated" data-wow-delay=".5s">Ejercicio 5</h3>
           <h2 class="wow fadeInUp animated" data-wow-delay=".5s" style="color:#ffffff;">Realice un script PHP que muestre mediante la utilización de variables 
           sus datos personales: nombre  completo,  lugar de  nacimiento  (departamento y  país, si  es extranjero), edad  y Código de Estudiante. 
           Muestre estos datos en una tabla.</h2>    
@@ -93,4 +93,5 @@
 	</div>
 </body>
 </html>
+
 
