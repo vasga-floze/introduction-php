@@ -51,7 +51,32 @@
             </form>
             
     </div>
- 
+    <?php
+
+        //funcion para realizar la suma del arreglo
+            function calcular(){
+                // se obtiene el arreglo de numeros
+                $arrayNumeros=$_REQUEST['numeros'];
+                //mediante la funcion array_sum se realiza la suma del arreglo
+                //echo "<h3 class='wow fadeInRight animated text-center' data-wow-delay='.5s'>El resultado de su suma es:  " . array_sum($b) . "<br/></h3>";
+                $suma = 0;
+                for($i=0;$i<count($arrayNumeros);$i++)
+                {
+
+                    $suma += ($arrayNumeros[$i]); //suma manual el array
+
+                    echo "<h3 class='wow fadeInRight animated text-center' data-wow-delay='.5s'> $arrayNumeros[$i] <br></h3>";
+                }
+                
+                echo "<h3 class='wow fadeInRight animated text-center' data-wow-delay='.5s'>La suma de tus numeros es: $suma</h3>";
+            }
+            
+            //Comprobar que 'numeros' esta definida en calcular
+            if (isset($_POST['numeros'])){
+                calcular();
+            }
+            
+    ?>
     
     <br/>
     <!-- //FIN DEL EJERCICIO -->
