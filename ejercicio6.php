@@ -1,5 +1,8 @@
 <?php
 
+	//obligamos a retornar el valor de retorno especificado
+	declare(strict_types=1);
+
     //incluir archivo de cabecera
     include "header.php"
 
@@ -29,38 +32,39 @@
 		<FORM ACTION="ejercicio6.php"  METHOD="POST"> 
 	
 			Introduzca el primer número:
-			<INPUT  TYPE="text" NAME="numero1"><BR> 
+			<INPUT  TYPE="number" NAME="numero1"><BR> 
 			Introduzca el segundo número:
-			 <INPUT TYPE="text" NAME="numero2"><BR> 
-			<INPUT TYPE="submit" VALUE="Compara" NAME="btn1" class="btn btn-success"> 
+			 <INPUT TYPE="number" NAME="numero2"><BR> 
+			<button type="submit" class="btn btn-success" type="submit" name="btn1">Comparar</button>
 	
 		</FORM>   
 
         <?php
-		 if(isset($_POST['btn1'])){
+		 
+			function comparar ($v1,$v2):int{
+			
+				if ($v1>$v2){
+					echo "El número mayor es ".$v1." ";
+					return $v1;
+				}
+				elseif ($v1==$v2){
+					echo "El número ".$v1." es igual al número ".$v2." ";
+					return $v2;
+				}
+				else{
+					echo "El número mayor es ".$v2." ";
+					return $v2;
+				}
+			}
 
-			$num1 = $_POST['numero1'];
-			$num2 = $_POST['numero2'];
-			
-			 comparar($num1,$num2);
-			
-			}
-			
-			
-			function comparar ($v1,$v2) {
-			
-			if ($v1>$v2){
-				 echo "El número mayor es (".$v1.")";
-			}
-			elseif ($v1==$v2){
-				echo "El número (".$v1.") es igual al número (".$v2.")";
-			}
-			else{
-				echo "El primer número mayor es(".$v2.")";
-			}
-			
-			}
-		
+			if(isset($_POST['btn1'])){
+
+				$num1 = $_POST['numero1'];
+				$num2 = $_POST['numero2'];
+				
+				 comparar((int)$num1,(int)$num2);
+				
+				}
 
         ?>
 
