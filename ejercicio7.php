@@ -119,123 +119,42 @@
 				<th scope="col"><h3>Estado</h3></th>
                 </tr>
             </thead>
-            <tbody>
-                <!--primer registro de la tabla-->
-                <tr>
-                <th scope="row">1</th>
-                <!--el nombre del array: $students, 
-                el indice del primer array interior: [0]
-                el key a mostrar dentro de ese array ["studentName"] 
-                Y asi sucesivamente con cada key-->
-                <td><h4><?=$students[0]["studentName"];?></h4></td>
-				<td><h4><?=$n1 =$students[0]["nota1"];?></h4></td>
-				<td><h4><?=$n2 =$students[0]["nota2"];?></h4></td>
-				<td><h4><?=$n3 =$students[0]["nota3"];?></h4></td>
-				<td><h4><?=round((($n1+$n2+$n3)/3),2);?></h4></td>
-                </tr>
-                <!--segundo registro de la tabla-->
-                <tr>
-                <th scope="row">2</th>
-                <td><h4><?=$students[1]["studentName"];?></h4></td>
-				<td><h4><?=$n1 =$students[1]["nota1"];?></h4></td>
-				<td><h4><?=$n2 =$students[1]["nota2"];?></h4></td>
-				<td><h4><?=$n3 =$students[1]["nota3"];?></h4></td>
-				<td><h4><?=round((($n1+$n2+$n3)/3),2);?></td>
-                <!--tercer registro de la tabla-->
-                <tr>
-                <th scope="row">3</th>
-                <td><h4><?=$students[2]["studentName"];?></h4></td>
-				<td><h4><?=$n1 =$students[2]["nota1"];?></h4></td>
-				<td><h4><?=$n2 =$students[2]["nota2"];?></h4></td>
-				<td><h4><?=$n3 =$students[2]["nota3"];?></h4></td>
-				<td><h4><?=round((($n1+$n2+$n3)/3),2);?></h4></td>
-                </tr>
-                <!--cuarto registro de la tabla-->
-                <tr>
-                <th scope="row">4</th>
-                <td><h4><?=$students[3]["studentName"];?></h4></td>
-				<td><h4><?=$n1 =$students[3]["nota1"];?></h4></td>
-				<td><h4><?=$n2 =$students[3]["nota2"];?></h4></td>
-				<td><h4><?=$n3 =$students[3]["nota3"];?></h4></td>
-				<td><h4><?=round((($n1+$n2+$n3)/3),2);?></h4></td>
-                </tr>
-                <!--quinto registro de la tabla-->
-                <tr>
-                <th scope="row">5</th>
-                <<td><h4><?=$students[4]["studentName"];?></h4></td>
-				<td><h4><?=$n1 =$students[4]["nota1"];?></h4></td>
-				<td><h4><?=$n2 =$students[4]["nota2"];?></h4></td>
-				<td><h4><?=$n3 =$students[4]["nota3"];?></h4></td>
-				<td><h4><?=round((($n1+$n2+$n3)/3),2);?></h4></td>
-                </tr>
-                <!--sexto registro de la tabla-->
-                <tr>
-                <th scope="row">6</th>
-                <td><h4><?=$students[5]["studentName"];?></h4></td>
-				<td><h4><?=$n1 =$students[5]["nota1"];?></h4></td>
-				<td><h4><?=$n2 =$students[5]["nota2"];?></h4></td>
-				<td><h4><?=$n3 =$students[5]["nota3"];?></h4></td>
-				<td><h4><?=round((($n1+$n2+$n3)/3),2);?></td>
-                </tr>
-                <!--septimo registro de la tabla-->
-                <tr>
-                <th scope="row">7</th>
-                <td><h4><?=$students[6]["studentName"];?></h4></td>
-				<td><h4><?=$n1 =$students[6]["nota1"];?></h4></td>
-				<td><h4><?=$n2 =$students[6]["nota2"];?></h4></td>
-				<td><h4><?=$n3 =$students[6]["nota3"];?></h4></td>
-				<td><h4><?=round((($n1+$n2+$n3)/3),2);?></h4></td>
-                </tr>
-				<tr>
-                <th scope="row">8</th>
-                <td><h4><?=$students[7]["studentName"];?></h4></td>
-				<td><h4><?=$n1 =$students[7]["nota1"];?></h4></td>
-				<td><h4><?=$n2 =$students[7]["nota2"];?></h4></td>
-				<td><h4><?=$n3 =$students[7]["nota3"];?></h4></td>
-				<td><h4><?=round((($n1+$n2+$n3)/3),2);?></h4></td>
-                </tr>
-				<tr>
-                <th scope="row">9</th>
-				<td><h4><?=$students[8]["studentName"];?></h4></td>
-				<td><h4><?=$n1 =$students[8]["nota1"];?></h4></td>
-				<td><h4><?=$n2 =$students[8]["nota2"];?></h4></td>
-				<td><h4><?=$n3 =$students[8]["nota3"];?></h4></td>
-				<td><h4><?=round((($n1+$n2+$n3)/3),2);?></h4></td>
-                </tr>
-				<tr>
-                <th scope="row">10</th>
-                <td><h4><?=$students[9]["studentName"];?></h4></td>
-				<td><h4><?=$n1 =$students[9]["nota1"];?></h4></td>
-				<td><h4><?=$n2 =$students[9]["nota2"];?></h4></td>
-				<td><h4><?=$n3 =$students[9]["nota3"];?></h4></td>
-				<td><h4><?=round((($n1+$n2+$n3)/3),2);?></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <!-- //FIN DE LA TABLA-->
+			<!--//encabezado de la tabla-->
 
     <!--Calcular notas promedio-->
     <?
-        $suma = 0;
-        for($i=0;$i<11;$i++)
+	//agrega funcion
+	function calcular(array $students){
+		for($i=0;$i<count($students);$i++)
         {
-           //sumar salario, acumulando en cada iteración 
-            $n1 +=  ($students[$i]["nota1"]);
-			$n2 +=  ($students[$i]["nota2"]);
-			$n3 +=  ($students[$i]["nota3"]);
-        }
-        //echo $n1 . "<br/>"; //comprobar la suma de notas 
+			echo "<tr>";
+			echo "<td>" . $i+1 . "</td>";
+			echo "<td>". $students[$i]["studentName"] . "</td>";
+			echo "<td>". $students[$i]["nota1"]. "</td>";
+			echo "<td>". $students[$i]["nota2"]. "</td>";
+			echo "<td>". $students[$i]["nota3"]. "</td>";
 
-        //calcular promedio que es igual a la suma de las notas entre cantidad de notas
-        $promedio1 = ($n1)/$i;
-		$promedio2 = ($n2)/$i;
-		$promedio3 = ($n3)/$i;
-		$promedio = ($promedio1+$promedio2+$promedio3)/$i;    
-		?>
-    <h4 class="text-center wow fadeInRight animated" data-wow-delay=".5s"><b>Las notas promedio son de:</b><?=round($promedio, 2)?></h4>
+			$promedio=($students[$i]["nota1"]+$students[$i]["nota2"]+$students[$i]["nota3"])/3;
+			echo "<td>".round($promedio,2). "</td>";
 
-    <div class="copyright wow fadeInUp animated" data-wow-delay=".5s">
+			if($promedio>=7){
+				echo "<td>Aprobado</td>";
+			}else{
+				echo "<td>Reprobado</td>";
+			}
+			
+			echo "</tr>";
+			
+
+        } 
+		echo "</table>";
+	}
+	//llamado a funcion
+	calcular($students);
+        
+	?>
+	</div>
+    <div class="copyright wow fadeInUp animated text-center" data-wow-delay=".5s"  body style="background-color:#2DCB74;">
 		<p>© 2021  . Universidad Gerardo Barrios</p>
 	</div>
 </body>
