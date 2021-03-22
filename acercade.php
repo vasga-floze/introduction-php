@@ -20,13 +20,12 @@
 			<div class="container">
 				<div class="popular-heading team-heading">
 					<h3 class="wow fadeInUp animated" data-wow-delay=".5s">Equipo</h3>
-					<p class="wow fadeInUp animated" data-wow-delay=".5s">Vivamus efficitur scelerisque nulla nec lobortis. Nullam ornare metus vel dolor feugiat maximus.Aenean nec nunc et metus volutpat dapibus ac vitae ipsum. Pellentesque sed rhoncus nibh</p>
 				</div>
 				<div class="team-grids">
 					<div class="col-md-4 team-grid wow fadeInLeft animated" data-wow-delay=".5s">
 						<img src="images/t1.png" alt="" />
-						<h4>Kilmar Roberto Chevez</h4>
-						<p>SMISXXXX</p>
+						<h4>Roberto Kilmar Chevez</h4>
+						<p>SMIS619019</p>
 						
 					</div>
 					<div class="col-md-4 team-grid wow fadeInUp animated" data-wow-delay=".5s">

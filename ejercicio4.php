@@ -15,37 +15,201 @@
 <body>
     <!-- DESARROLLO DEL EJERCICIO -->
 
-        <?php
+    <div class="team" body style="background-color:#2DCB74;">
+        <div class="container">
+                <div class="popular-heading team-heading">
+                    <h3 class="wow fadeInUp animated" data-wow-delay=".5s">Ejercicio 4</h3>
+                    <h2 class="wow fadeInUp animated" data-wow-delay=".5s" style="color:#ffffff;"> Cree un array asociativo en donde almacene los datos mostrados en la siguiente tabla.<br/></h2>
+                </div>
+                <div class=" team-heading">
+                    <img src="images/cuatro.jpg" class="img-thumbnail wow fadeInRight animated" alt="100px" >
+                </div>
+                <div class="team-heading">
+                    <br/><br/>
+                    <h2 class="wow fadeInUp animated team-heading" data-wow-delay=".5s" style="color:#ffffff; font-family: 'Francois One', sans-serif">Se pide:</h2>
+                    <h3 class="wow fadeInUp animated" data-wow-delay=".5s" style="color:#ffffff; font-family: 'Francois One', sans-serif">- Mostrar los datos del array en una tabla</h3>
+                    <h3 class="wow fadeInUp animated" data-wow-delay=".5s" style="color:#ffffff; font-family: 'Francois One', sans-serif">- Calcular el salario promedio</h3>
+                    <h3 class="wow fadeInUp animated" data-wow-delay=".5s" style="color:#ffffff; font-family: 'Francois One', sans-serif">- Cantidad de empleados por departamento</h3>
+                </div>
+        </div>
+    </div>
 
-        ?>
+    <?php
+        /* Crear array asociativo*/
+        $employees = array(
+            array( 
+                "departamento" => "R.R.H.H", 
+                "empleado" => "Margarita Linares", 
+                "salario" => 3500 
+            ),
+            array( 
+                "departamento" => "Contabilidad ", 
+                "empleado" => "Alberto Canizales", 
+                "salario" => 2000 
+            ),
+            array( 
+                "departamento" => "Finanzas", 
+                "empleado" => " Maria Gomez", 
+                "salario" => 2500 
+            ),
+            array( 
+                "departamento" => "Gerencia", 
+                "empleado" => " Anastacia Rivera", 
+                "salario" => 3000 
+            ),
+            array( 
+                "departamento" => "Finanzas", 
+                "empleado" => "Bladimir Romero", 
+                "salario" => 1000 
+            ),
+            array( 
+                "departamento" => "Contabilidad ", 
+                "empleado" => "Andrea Robles", 
+                "salario" => 3000 
+            ),
+            array( 
+                "departamento" => "R.R.H.H", 
+                "empleado" => "Carmen Rosales", 
+                "salario" => 1500 
+            )
+        );
+    ?>
+    <!--Mostrar los datos del array en una tabla-->
+    <div class="container text-center">
+        <div class="text-center wow fadeInLeft">
+            <h3>EMPLEADOS</h3>
+        </div>
 
+        <!--Tabla -->
+        <table class="table table-bordered table-dark wow fadeInRight animated" data-wow-delay=".5s" >
+            <!--encabezado de la tabla-->
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col"><h3>Departamento</h3></th>
+                <th scope="col"><h3>Empleado</h3></th>
+                <th scope="col"><h3>Salario</h3></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--primer registro de la tabla-->
+                <tr>
+                <th scope="row">1</th>
+                <!--el nombre del array: $datos, 
+                el indice del primer array interior: [0]
+                el key a mostrar dentro de ese array ["departamento"] 
+                Y asi sucesivamente con cada key-->
+                <td><h4><?=$employees[0]["departamento"];?></h4></td>
+                <td><h4><?=$employees[0]["empleado"];?></h4></td>
+                <td><h4>$<?=$employees[0]["salario"];?></h4></td>
+                </tr>
+                <!--segundo registro de la tabla-->
+                <tr>
+                <th scope="row">2</th>
+                <td><h4><?=$employees[1]["departamento"];?></h4></td>
+                <td><h4><?=$employees[1]["empleado"];?></h4></td>
+                <td><h4>$<?=$employees[1]["salario"];?></h4></td>
+                </tr>
+                <!--tercer registro de la tabla-->
+                <tr>
+                <th scope="row">3</th>
+                <td><h4><?=$employees[2]["departamento"];?></h4></td>
+                <td><h4><?=$employees[2]["empleado"];?></h4></td>
+                <td><h4>$<?=$employees[2]["salario"];?></h4></td>
+                </tr>
+                <!--cuarto registro de la tabla-->
+                <tr>
+                <th scope="row">4</th>
+                <td><h4><?=$employees[3]["departamento"];?></h4></td>
+                <td><h4><?=$employees[3]["empleado"];?></h4></td>
+                <td><h4>$<?=$employees[3]["salario"];?></h4></td>
+                </tr>
+                <!--quinto registro de la tabla-->
+                <tr>
+                <th scope="row">5</th>
+                <td><h4><?=$employees[4]["departamento"];?></h4></td>
+                <td><h4><?=$employees[4]["empleado"];?></h4></td>
+                <td><h4>$<?=$employees[4]["salario"];?></h4></td>
+                </tr>
+                <!--sexto registro de la tabla-->
+                <tr>
+                <th scope="row">6</th>
+                <td><h4><?=$employees[5]["departamento"];?></h4></td>
+                <td><h4><?=$employees[5]["empleado"];?></h4></td>
+                <td><h4>$<?=$employees[5]["salario"];?></h4></td>
+                </tr>
+                <!--septimo registro de la tabla-->
+                <tr>
+                <th scope="row">7</th>
+                <td><h4><?=$employees[6]["departamento"];?></h4></td>
+                <td><h4><?=$employees[6]["empleado"];?></h4></td>
+                <td><h4>$<?=$employees[6]["salario"];?></h4></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- //FIN DE LA TABLA-->
+
+    <!--Calcular el salario promedio-->
+    <?
+        $suma = 0;
+        for($i=0;$i<7;$i++)
+        {
+           //sumar salario, acumulando en cada iteración 
+            $suma +=  ($employees[$i]["salario"]);
+                       
+        }
+        //echo $suma . "<br/>"; //comprobar la suma total de salario
+
+        //calcular promedio que es igual a la suma de todos los salarios entre la cantidad de salarios
+        $promedio = ($suma)/$i; 
+    ?>
+
+    <h4 class="text-center wow fadeInRight animated" data-wow-delay=".5s"><b>El salario promedio es:</b> $<?=round($promedio, 2)?></h4>
+
+    <!-- Cantidad de empleados por departamento-->
+    <?php
+        
+         /*declarar variables para que ya existan cuando se usan como 
+            operadores de incremento en el if*/
+            $rrhh = "";
+            $contabilidad = "";
+            $finanzas = "";
+            $gerencia = "";
+        
+        for($i=0;$i<7;$i++)
+        {
+            //se indica la clave 
+            $depto =  ($employees[$i]["departamento"]);
+                
+            if ($depto == "R.R.H.H") 
+            {
+                $rrhh++;
+            } 
+            elseif ($depto == "Contabilidad ") 
+            {
+                $contabilidad++;
+            } 
+            elseif ($depto == "Finanzas") 
+            {
+                $finanzas++;
+            }
+            else
+            {
+                $gerencia++;
+            }
+        }
+    ?>
+    <br/>
+    <h4 class="text-center wow fadeInLeft animated" data-wow-delay=".5s"><?="Hay " . $rrhh . " empleados en el departamento de R.R.H.H" . "<br/>"?></h4>
+    <h4 class="text-center wow fadeInLeft animated" data-wow-delay=".5s"><?="Hay " . $contabilidad . " empleados en el departamento de Contabilidad" . "<br/>"?></h4>
+    <h4 class="text-center wow fadeInLeft animated" data-wow-delay=".5s"><?="Hay " . $finanzas . " empleados en el departamento de Finanzas" . "<br/>"?></h4>
+    <h4 class="text-center wow fadeInLeft animated" data-wow-delay=".5s"><?="Hay " . $gerencia . " empleado en el departamento de Gerencia" . "<br/>"?></h4>
+    <br/>
     <!-- //FIN DEL EJERCICIO -->
 
-    <!-- footer -->
-<div class="footer">
-		<div class="container">
-			<div class="footer-grids">
-				<div class="col-md-3 footer-nav wow fadeInLeft animated" data-wow-delay=".5s">
-					<h4>Navegacion</h4>
-					<ul>
-					<li>
-						<li><a href="ejercicio1.php">Ejercicio 1</a></li>
-						<li><a href="ejercicio2.php">Ejercicio 2</a></li>
-						<li><a href="ejercicio3.php">Ejercicio 3</a></li>
-						<li><a href="ejercicio4.php">Ejercicio 4</a></li>
-                        <li><a href="ejercicio5.php">Ejercicio 5</a></li>
-                        <li><a href="ejercicio6.php">Ejercicio 6</a></li>
-                        <li><a href="ejercicio7.php">Ejercicio 7</a></li>
-                        							
-					</ul>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="copyright wow fadeInUp animated" data-wow-delay=".5s">
-				<p>© 2021  . Universidad Gerardo Barrios</p>
-			</div>
-		</div>
+    <div class="copyright wow fadeInUp animated" data-wow-delay=".5s" body style="background-color:#2DCB74;">
+		<p class= "text-center">© 2021  . Universidad Gerardo Barrios</p>
 	</div>
-	<!-- //footer -->
 </body>
 </html>
