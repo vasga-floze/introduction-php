@@ -15,14 +15,17 @@
 <body>
     <!-- DESARROLLO DEL EJERCICIO -->
 
-	<center> 
-    
-	<P>Cree una función que calcule cual es el número mayor de dos enteros,<BR>
-	 establezca el valorde salida correspondiente y haga uso de strict_types.</P>
-	
-	 <hr >
-	
-	
+	<div class="team" body style="background-color:#2DCB74;">
+        <div class="container">
+                <div class="popular-heading team-heading">
+                    <h3 class="wow fadeInUp animated" data-wow-delay=".5s">Ejercicio 6</h3>
+                    <h2 class="wow fadeInUp animated" data-wow-delay=".5s" style="color:#ffffff;"> Cree una función que calcule cual es el número mayor de dos enteros, establezca el
+						valor de salida correspondiente y haga uso de strict_types.<br/>
+					</h2>
+                </div>
+        </div>
+    </div>
+
 		<FORM ACTION="ejercicio6.php"  METHOD="POST"> 
 	
 			Introduzca el primer número:
@@ -32,9 +35,6 @@
 			<INPUT TYPE="submit" VALUE="Compara" NAME="btn1" class="btn btn-success"> 
 	
 		</FORM>   
-		
-	</center>
-
 
         <?php
 		 if(isset($_POST['btn1'])){
@@ -66,31 +66,8 @@
 
     <!-- //FIN DEL EJERCICIO -->
 
-    <!-- footer -->
-<div class="footer">
-		<div class="container">
-			<div class="footer-grids">
-				<div class="col-md-3 footer-nav wow fadeInLeft animated" data-wow-delay=".5s">
-					<h4>Navegacion</h4>
-					<ul>
-					<li>
-						<li><a href="ejercicio1.php">Ejercicio 1</a></li>
-						<li><a href="ejercicio2.php">Ejercicio 2</a></li>
-						<li><a href="ejercicio3.php">Ejercicio 3</a></li>
-						<li><a href="ejercicio4.php">Ejercicio 4</a></li>
-                        <li><a href="ejercicio5.php">Ejercicio 5</a></li>
-                        <li><a href="ejercicio6.php">Ejercicio 6</a></li>
-                        <li><a href="ejercicio7.php">Ejercicio 7</a></li>
-								
-					</ul>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="copyright wow fadeInUp animated" data-wow-delay=".5s">
-				<p>© 2021  . Universidad Gerardo Barrios</p>
-			</div>
-		</div>
+	<div class="copyright wow fadeInUp animated" data-wow-delay=".5s" body style="background-color:#2DCB74;">
+		<p class= "text-center">© 2021  . Universidad Gerardo Barrios</p>
 	</div>
-	<!-- //footer -->
 </body>
 </html>
